@@ -22,7 +22,7 @@ class MainActivity() : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
          arrayListOf = arrayListOf<String>("asd", "dsa", "pop", "dqwdqqd")
-         adapter = MyAdapter(arrayListOf)
+         adapter = MyAdapter(arrayListOf,this)
         recycler.adapter = adapter // cach 2
         recycler.layoutManager = LinearLayoutManager(this)
 

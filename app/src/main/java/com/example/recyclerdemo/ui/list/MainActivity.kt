@@ -1,28 +1,30 @@
-package com.example.recyclerdemo
+package com.example.recyclerdemo.ui.list
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.view.Menu
-import android.view.MenuInflater
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.mikepenz.itemanimators.ScaleUpAnimator
+import com.example.recyclerdemo.ui.list.recycler.MyAdapter
+import com.example.recyclerdemo.R
 import com.mikepenz.itemanimators.SlideRightAlphaAnimator
+import dagger.android.support.DaggerAppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
+import javax.inject.Inject
 
-class MainActivity() : AppCompatActivity() {
-        lateinit var adapter: MyAdapter
-        lateinit  var arrayListOf: ArrayList<String>
+class MainActivity() : DaggerAppCompatActivity() {
+      @Inject  lateinit var adapter: MyAdapter
+      @Inject  lateinit  var arrayListOf: ArrayList<String>
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-         arrayListOf = arrayListOf<String>("asd", "dsa", "pop", "dqwdqqd")
-         adapter = MyAdapter(arrayListOf,this)
+        // không có khởi tạo 2 biến adapter arrayListof mà dùng dùng dc đây luôn
         recycler.adapter = adapter // cach 2
         recycler.layoutManager = LinearLayoutManager(this)
 

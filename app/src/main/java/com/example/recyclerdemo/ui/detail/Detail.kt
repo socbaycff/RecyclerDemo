@@ -1,7 +1,8 @@
-package com.example.recyclerdemo
+package com.example.recyclerdemo.ui.detail
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.recyclerdemo.R
 import kotlinx.android.synthetic.main.activity_detail.*
 
 class Detail : AppCompatActivity() {

@@ -1,18 +1,19 @@
-package com.example.recyclerdemo
+package com.example.recyclerdemo.ui.list.recycler
 
-import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityOptionsCompat
 import androidx.recyclerview.widget.RecyclerView
+import com.example.recyclerdemo.R
+import com.example.recyclerdemo.ui.list.MainActivity
+import com.example.recyclerdemo.ui.detail.Detail
 import kotlinx.android.synthetic.main.item.view.*
+import javax.inject.Inject
 
-class MyAdapter(var myList: ArrayList<String>, val activity: AppCompatActivity): RecyclerView.Adapter<MyAdapter.MyHolder>() {
+class MyAdapter @Inject constructor(var myList: ArrayList<String>, val activity: MainActivity): RecyclerView.Adapter<MyAdapter.MyHolder>() {
 
 
 

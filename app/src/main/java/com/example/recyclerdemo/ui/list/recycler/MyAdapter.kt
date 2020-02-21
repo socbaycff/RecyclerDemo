@@ -31,8 +31,6 @@ class MyAdapter @Inject constructor(var myList: ArrayList<String>, val activity:
                 activity.startActivity(intent,option.toBundle())
 
             }
-
-
         }
 
     }
@@ -53,7 +51,6 @@ class MyAdapter @Inject constructor(var myList: ArrayList<String>, val activity:
 
 
     fun deleteAt(position: Int) {
-
         notifyItemRemoved(position) // cap nhat lai giao dien
     }
 }

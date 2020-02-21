@@ -18,7 +18,7 @@ class MyAdapter @Inject constructor(var myList: ArrayList<String>, val activity:
 
 
     inner class MyHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        var textView: TextView = itemView.textView // find
+        var textView: TextView = itemView.textView // find asdas
         var button = itemView.button
 
         init {

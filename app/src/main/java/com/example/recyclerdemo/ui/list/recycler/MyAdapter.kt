@@ -27,9 +27,7 @@ class MyAdapter @Inject constructor(var myList: ArrayList<String>, val activity:
                     ActivityOptionsCompat.makeSceneTransitionAnimation(activity, button, "nutBam")
                 val intent = Intent(activity, Detail::class.java)
                 intent.putExtra("data",textView.text)
-
                 activity.startActivity(intent,option.toBundle())
-
             }
         }
 
@@ -37,7 +35,6 @@ class MyAdapter @Inject constructor(var myList: ArrayList<String>, val activity:
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item, parent, false)
-
         return MyHolder(view)
     }
 
